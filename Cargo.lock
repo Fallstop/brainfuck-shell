@@ -7,7 +7,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fe438c63458706e03479442743baae6c88256498e6431708f6dfc520a26515d3"
 dependencies = [
  "lazy_static 1.4.0",
- "regex 1.4.3",
+ "regex 1.4.6",
 ]
 
 [[package]]
@@ -821,7 +821,7 @@ dependencies = [
  "encode_unicode",
  "lazy_static 1.4.0",
  "libc",
- "regex 1.4.3",
+ "regex 1.4.6",
  "terminal_size",
  "unicode-width",
  "winapi 0.3.9",
@@ -1429,7 +1429,7 @@ version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "031fe36712cec8b81c5b76b555666ce855a4dfc2dcc35bb907046bf2ef545578"
 dependencies = [
- "regex 1.4.3",
+ "regex 1.4.6",
 ]
 
 [[package]]
@@ -1526,7 +1526,7 @@ dependencies = [
  "atty",
  "humantime",
  "log 0.4.14",
- "regex 1.4.3",
+ "regex 1.4.6",
  "termcolor",
 ]
 
@@ -1537,7 +1537,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "17392a012ea30ef05a610aa97dfb49496e71c9f676b27879922ea5bdf60d9d3f"
 dependencies = [
  "log 0.4.14",
- "regex 1.4.3",
+ "regex 1.4.6",
 ]
 
 [[package]]
@@ -1612,7 +1612,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ae91abf6555234338687bb47913978d275539235fcb77ba9863b779090b42b14"
 dependencies = [
  "bit-set",
- "regex 1.4.3",
+ "regex 1.4.6",
 ]
 
 [[package]]
@@ -2092,7 +2092,7 @@ dependencies = [
  "bstr",
  "fnv",
  "log 0.4.14",
- "regex 1.4.3",
+ "regex 1.4.6",
 ]
 
 [[package]]
@@ -2135,7 +2135,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "49f837c62de05dc9cc71ff6486cd85de8856a330395ae338a04bfcefe5e91075"
 dependencies = [
  "num",
- "regex 1.4.3",
+ "regex 1.4.6",
 ]
 
 [[package]]
@@ -2919,7 +2919,7 @@ checksum = "eaddc201fbde99703a9a33c1909b9cc5a8ff57dd6237e014fd04b03b30e8b3b8"
 dependencies = [
  "async-std",
  "crossterm 0.19.0",
- "regex 1.4.3",
+ "regex 1.4.6",
  "thiserror",
 ]
 
@@ -3124,6 +3124,7 @@ dependencies = [
  "hamcrest2",
  "itertools",
  "log 0.4.14",
+ "nu-brainfuck",
  "nu-cli",
  "nu-command",
  "nu-data",
@@ -3172,10 +3173,28 @@ name = "nu-ansi-term"
 version = "0.30.1"
 dependencies = [
  "doc-comment",
- "regex 1.4.3",
+ "regex 1.4.6",
  "serde 1.0.124",
  "serde_json",
  "winapi 0.3.9",
+]
+
+[[package]]
+name = "nu-brainfuck"
+version = "0.30.1"
+dependencies = [
+ "bigdecimal",
+ "indexmap",
+ "nu-command",
+ "nu-errors",
+ "nu-plugin",
+ "nu-protocol",
+ "nu-source",
+ "nu-test-support",
+ "regex 1.4.6",
+ "rustyline",
+ "sxd-document",
+ "sxd-xpath",
 ]
 
 [[package]]
@@ -3219,6 +3238,7 @@ dependencies = [
  "log 0.4.14",
  "meval",
  "nu-ansi-term 0.30.1",
+ "nu-brainfuck",
  "nu-command",
  "nu-data",
  "nu-engine",
@@ -3245,7 +3265,7 @@ dependencies = [
  "quickcheck_macros",
  "rand 0.8.3",
  "rayon",
- "regex 1.4.3",
+ "regex 1.4.6",
  "roxmltree",
  "rusqlite",
  "rust-embed",
@@ -3344,7 +3364,7 @@ dependencies = [
  "quickcheck_macros",
  "rand 0.7.3",
  "rayon",
- "regex 1.4.3",
+ "regex 1.4.6",
  "roxmltree",
  "rusqlite",
  "rust-embed",
@@ -3489,7 +3509,7 @@ dependencies = [
  "linked-hash-map 0.5.4",
  "nu-test-support",
  "num-traits 0.2.14",
- "regex 1.4.3",
+ "regex 1.4.6",
  "serde 1.0.124",
  "serde_json",
 ]
@@ -3591,7 +3611,7 @@ name = "nu-table"
 version = "0.30.1"
 dependencies = [
  "nu-ansi-term 0.30.1",
- "regex 1.4.3",
+ "regex 1.4.6",
  "unicode-width",
 ]
 
@@ -3722,7 +3742,7 @@ dependencies = [
  "nu-plugin",
  "nu-protocol",
  "nu-source",
- "regex 1.4.3",
+ "regex 1.4.6",
 ]
 
 [[package]]
@@ -4203,7 +4223,7 @@ version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c705f256449c60da65e11ff6626e0c16a0a0b96aaa348de61376b249bc340f41"
 dependencies = [
- "regex 1.4.3",
+ "regex 1.4.6",
 ]
 
 [[package]]
@@ -4840,20 +4860,19 @@ dependencies = [
  "aho-corasick 0.6.10",
  "memchr",
  "regex-syntax 0.5.6",
- "thread_local 0.3.6",
+ "thread_local",
  "utf8-ranges",
 ]
 
 [[package]]
 name = "regex"
-version = "1.4.3"
+version = "1.4.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d9251239e129e16308e70d853559389de218ac275b515068abc96829d05b948a"
+checksum = "2a26af418b574bd56588335b3a3659a65725d4e636eb1016c2f9e3b38c7cc759"
 dependencies = [
  "aho-corasick 0.7.15",
  "memchr",
  "regex-syntax 0.6.22",
- "thread_local 1.1.3",
 ]
 
 [[package]]
@@ -5273,7 +5292,7 @@ dependencies = [
  "lazy_static 1.4.0",
  "linked-hash-map 0.3.0",
  "num-traits 0.1.43",
- "regex 1.4.3",
+ "regex 1.4.6",
  "serde 0.8.23",
 ]
 
@@ -5995,15 +6014,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "thread_local"
-version = "1.1.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8018d24e04c95ac8790716a5987d0fec4f8b27249ffa0f7d33f1369bdfb88cbd"
-dependencies = [
- "once_cell",
-]
-
-[[package]]
 name = "tiff"
 version = "0.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6094,7 +6104,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f565e410cfc24c2f2a89960b023ca192689d7f77d3f8d4f4af50c2d8affe1117"
 dependencies = [
  "lazy_static 1.4.0",
- "regex 1.4.3",
+ "regex 1.4.6",
 ]
 
 [[package]]
