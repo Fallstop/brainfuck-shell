@@ -31,6 +31,8 @@ use std::error::Error;
 use std::iter::Iterator;
 use std::path::PathBuf;
 
+mod brainfuck;
+
 pub struct Options {
     pub config: Option<OsString>,
     pub stdin: bool,
@@ -308,6 +310,8 @@ pub fn cli(context: EvaluationContext, options: Options) -> Result<(), Box<dyn E
         let mut readline = Err(ReadlineError::Eof);
         while let Some(ref cmd) = initial_command {
             readline = rl.readline_with_initial(&prompt, (&cmd, ""));
+            println!("{:#?}",readline);
+            readline = brainfuck.parseBF(readline.unwrap());
             initial_command = None;
         }
 
