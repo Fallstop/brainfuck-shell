@@ -521,6 +521,52 @@ dependencies = [
 ]
 
 [[package]]
+name = "brainfuck-shell"
+version = "0.30.1"
+dependencies = [
+ "clap",
+ "ctrlc",
+ "dunce",
+ "futures 0.3.13",
+ "hamcrest2",
+ "itertools",
+ "log 0.4.14",
+ "nu-brainfuck",
+ "nu-cli",
+ "nu-command",
+ "nu-data",
+ "nu-engine",
+ "nu-errors",
+ "nu-parser",
+ "nu-plugin",
+ "nu-protocol",
+ "nu-source",
+ "nu-test-support",
+ "nu-value-ext",
+ "nu_plugin_binaryview",
+ "nu_plugin_chart",
+ "nu_plugin_fetch",
+ "nu_plugin_from_bson",
+ "nu_plugin_from_sqlite",
+ "nu_plugin_inc",
+ "nu_plugin_match",
+ "nu_plugin_post",
+ "nu_plugin_ps",
+ "nu_plugin_query_json",
+ "nu_plugin_s3",
+ "nu_plugin_selector",
+ "nu_plugin_start",
+ "nu_plugin_sys",
+ "nu_plugin_textview",
+ "nu_plugin_to_bson",
+ "nu_plugin_to_sqlite",
+ "nu_plugin_tree",
+ "nu_plugin_xpath",
+ "pretty_env_logger",
+ "serial_test",
+]
+
+[[package]]
 name = "bson"
 version = "0.14.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3111,52 +3157,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3f6bb902e437b6d86e03cce10a7e2af662292c5dfef23b65899ea3ac9354ad44"
 dependencies = [
  "winapi 0.3.9",
-]
-
-[[package]]
-name = "nu"
-version = "0.30.1"
-dependencies = [
- "clap",
- "ctrlc",
- "dunce",
- "futures 0.3.13",
- "hamcrest2",
- "itertools",
- "log 0.4.14",
- "nu-brainfuck",
- "nu-cli",
- "nu-command",
- "nu-data",
- "nu-engine",
- "nu-errors",
- "nu-parser",
- "nu-plugin",
- "nu-protocol",
- "nu-source",
- "nu-test-support",
- "nu-value-ext",
- "nu_plugin_binaryview",
- "nu_plugin_chart",
- "nu_plugin_fetch",
- "nu_plugin_from_bson",
- "nu_plugin_from_sqlite",
- "nu_plugin_inc",
- "nu_plugin_match",
- "nu_plugin_post",
- "nu_plugin_ps",
- "nu_plugin_query_json",
- "nu_plugin_s3",
- "nu_plugin_selector",
- "nu_plugin_start",
- "nu_plugin_sys",
- "nu_plugin_textview",
- "nu_plugin_to_bson",
- "nu_plugin_to_sqlite",
- "nu_plugin_tree",
- "nu_plugin_xpath",
- "pretty_env_logger",
- "serial_test",
 ]
 
 [[package]]

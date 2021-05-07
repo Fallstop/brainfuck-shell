@@ -295,7 +295,6 @@ fn get_config(input: String)-> ConfigStruct{ //Command line interface tool
     config.code =  process_bf(&input.clone(),false);
     config.output_type = 'a';
     config.print_level = 1;
-    config.code_loop_cache = false;
     
     if config.code.len() <= 3 {
         config.code_compression = false;
