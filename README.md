@@ -1,11 +1,11 @@
 # README
 
-[![Crates.io](https://img.shields.io/crates/v/nu.svg)](https://crates.io/crates/nu)
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/brainfuck-shell)
 
 
 ## Brainfuck-Shell
 
-A new type of shell based off [brainfuck-shell](https://github.com/nushell/nushell) that takes your commands in brainfuck.
+A new type of shell based off [nu-shell](https://github.com/nushell/nushell) that takes your commands in brainfuck.
 
 ## Example:
 
