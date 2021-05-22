@@ -1,6 +1,6 @@
 [package]
 authors = ["The Nu Project Contributors"]
-description = "Traverses xml"
+description = "Brainfuck Module for the Nu Shell"
 edition = "2018"
 license = "MIT"
 name = "nu-brainfuck"

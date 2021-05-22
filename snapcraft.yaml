@@ -1,0 +1,39 @@
+name: brainfuck-shell
+version: git
+summary: Shell that parses your commands as brainfuck.
+description: |
+  Based of nu-shell, this is a small modification that parses your command as brainfuck, then executes it.
+  Example:
+    > """
+        +++++ ++++[ ->+++ +++++ +<]>+ +++++ +++++ +++++ ++.<+ ++[-> +++<] >+++.
+        +++++ +++.- ---.< ++++[ ->--- -<]>- -.<++ ++[-> ++++< ]>+++ +++++ .<+++
+        +++++ +[->- ----- ---<] >---- ----. <++++ +++++ [->++ +++++ ++<]> +++++
+        +.<++ +[->- --<]> ----- -.<++ ++[-> ++++< ]>+.<
+      """
+
+    Executing: cowsay why
+    _____
+    < why >
+    -----
+            \   ^__^
+            \  (oo)\_______
+                (__)\       )\/\
+                    ||----w |
+                    ||     ||
+
+base: core20
+confinement: strict
+
+
+build-packages:
+  - pkg-config
+  - libssl-dev
+
+parts:
+  brainfuck-shell:
+    plugin: rust
+    source: .
+
+apps:
+  brainfuck-shell:
+    command: bin/nu
